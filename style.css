@@ -1,5 +1,6 @@
 @font-face {
-  font-family: harryPotter;
+  font-family: harryPotter, "Times New Roman", Times, serif;
+  /*  make sure to include fall back fonts in case something happens where this one doesn't load and to ensure maximum compatibility between browsers/operating systems */
   src: url(fonts/HARRYP__.TTF);
 }
 
@@ -40,19 +41,26 @@
   }
 }
 
+/* Put your largest styles at the top of your stylesheet to ensure specificity styles doesn't override later in the file  */
+body {
+  font-size: 20px;
+  font-family: lumosMaxima;
+  color: white;
+  background-color: black;
+  width: 100%;
+}
+
 header {
   background-color: rgba(0, 0, 0, 0.35);
   font-family: harryPotter;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: auto;
+
 }
 
 h1 {
   font-size: 100px;
-  height: 100px;
   margin: 0px 0px 10px 0px;
   padding: 25px 0px 0px 0px;
 }
@@ -62,13 +70,7 @@ h1 {
   font-weight: 300;
 }
 
-body {
-  font-size: 20px;
-  font-family: lumosMaxima;
-  color: white;
-  background-color: black;
-  width: 100%;
-}
+
 
 .question {
   font-weight: 600;
@@ -211,12 +213,7 @@ footer {
   background-color: green;
 }
 
-#hogwarts,
-#dobby,
-#ravenclaw,
-#slytherin,
-#hufflepuff,
-#gryffindor {
+.themes button {
   font-size: 15px;
   border: 0px;
   border-radius: 3px;

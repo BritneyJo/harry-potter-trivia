@@ -8,11 +8,13 @@ I used vanilla javascript to make my functions and to manipulate the DOM.
 Inline-style:
 ![javascript screenshot](/img/vanillaJS.PNG)
 
-#Built with
+# Built with
 
-- Visual Studio Code
+- HTML5
+- CSS3
+- Vanilla JavaScript
 
-#How to use
+# How to use
 
 1.  Once the page loads click on the Lumos button to load the game
     ![lumos screenshot](/img/lumosImage.PNG)

@@ -102,47 +102,65 @@
     }
   ];
   let background = document.querySelector("#background");
-  function dobby() {
-    document.querySelector(".dobby").play();
-    background.setAttribute("class", "dobby");
-  }
-  let dobbyButton = document.querySelector("#dobby");
-  dobbyButton.addEventListener("click", dobby);
 
-  function gryffindor() {
-    document.querySelector(".gryffindor").play();
-    background.setAttribute("class", "gryffindor");
+// These two functions can DRY up your code a lot for the theme switching
+  function chooseTheme(){
+    var theme = this.getAttribute('id');
+    document.querySelector("."+ theme).play();
+    background.setAttribute("class", theme);
   }
-  let gryffindorButton = document.querySelector("#gryffindor");
-  gryffindorButton.addEventListener("click", gryffindor);
 
-  function hufflepuff() {
-    document.querySelector(".hufflepuff").play();
-    background.setAttribute("class", "hufflepuff");
+  function switchTheme(){
+    let buttons = document.querySelectorAll(".themes button");
+    for (i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener("click", chooseTheme);
+    }
   }
-  let hufflepuffButton = document.querySelector("#hufflepuff");
-  hufflepuffButton.addEventListener("click", hufflepuff);
 
-  function slytherin() {
-    document.querySelector(".slytherin").play();
-    background.setAttribute("class", "slytherin");
-  }
-  let slytherinButton = document.querySelector("#slytherin");
-  slytherinButton.addEventListener("click", slytherin);
-
-  function ravenclaw() {
-    document.querySelector(".ravenclaw").play();
-    background.setAttribute("class", "ravenclaw");
-  }
-  let ravenclawButton = document.querySelector("#ravenclaw");
-  ravenclawButton.addEventListener("click", ravenclaw);
-
-  function hogwarts() {
-    document.querySelector(".hogwarts").play();
-    background.setAttribute("class", "background");
-  }
-  let hogwartsButton = document.querySelector("#hogwarts");
-  hogwartsButton.addEventListener("click", hogwarts);
+  switchTheme();
+  //
+  //
+  // function dobby() {
+  //   document.querySelector(".dobby").play();
+  //   background.setAttribute("class", "dobby");
+  // }
+  // let dobbyButton = document.querySelector("#dobby");
+  // dobbyButton.addEventListener("click", dobby);
+  //
+  // function gryffindor() {
+  //   document.querySelector(".gryffindor").play();
+  //   background.setAttribute("class", "gryffindor");
+  // }
+  // let gryffindorButton = document.querySelector("#gryffindor");
+  // gryffindorButton.addEventListener("click", gryffindor);
+  //
+  // function hufflepuff() {
+  //   document.querySelector(".hufflepuff").play();
+  //   background.setAttribute("class", "hufflepuff");
+  // }
+  // let hufflepuffButton = document.querySelector("#hufflepuff");
+  // hufflepuffButton.addEventListener("click", hufflepuff);
+  //
+  // function slytherin() {
+  //   document.querySelector(".slytherin").play();
+  //   background.setAttribute("class", "slytherin");
+  // }
+  // let slytherinButton = document.querySelector("#slytherin");
+  // slytherinButton.addEventListener("click", slytherin);
+  //
+  // function ravenclaw() {
+  //   document.querySelector(".ravenclaw").play();
+  //   background.setAttribute("class", "ravenclaw");
+  // }
+  // let ravenclawButton = document.querySelector("#ravenclaw");
+  // ravenclawButton.addEventListener("click", ravenclaw);
+  //
+  // function hogwarts() {
+  //   document.querySelector(".hogwarts").play();
+  //   background.setAttribute("class", "background");
+  // }
+  // let hogwartsButton = document.querySelector("#hogwarts");
+  // hogwartsButton.addEventListener("click", hogwarts);
 
   function buildTrivia() {
     const output = [];
