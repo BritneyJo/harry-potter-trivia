@@ -22,7 +22,7 @@ Renders in browser with no major errors and separates concerns into distinct HTM
 The app is fully responsive. App incorporates modern UI themes, and/or adds unique flair.
 
 
-## Presentation - Excelling (2)
+## Presentation - Performing (2)
 
 Application has functional and creative interface and a readme with relevant information about the application.
 
